@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+
+  "packageRules": [
+    {
+      "description": "Stay on React 18. Keeps the repro to the peer range change in react-dom 18.3.1",
+      "matchPackageNames": ["react", "react-dom"],
+      "allowedVersions": "<19"
+    },
+    {
+      "description": "Group everything in one branch, so react-dom and react are updated together",
+      "matchPackageNames": ["*"],
+      "groupName": "all",
+      "groupSlug": "all"
+    }
+  ]
+}
