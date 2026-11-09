@@ -19,7 +19,7 @@ jobs:
 
       - uses: pnpm/action-setup@v6
         with:
-          version: 11.11.0
+          package_json_file: ./package.json
 
       - run: pnpx renovate "matthewnitschke-wk/renovate_strictPeers-in-group-update-issue"
         env:
